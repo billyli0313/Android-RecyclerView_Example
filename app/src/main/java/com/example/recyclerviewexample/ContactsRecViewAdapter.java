@@ -40,6 +40,7 @@ public class ContactsRecViewAdapter extends RecyclerView.Adapter<ContactsRecView
                 Toast.makeText(context, contacts.get(position).getName()+ " Selected", Toast.LENGTH_SHORT).show();
             }
         });
+        Glide.with(context).asBitmap().load(contacts.get(position).getImageUrl()).into(holder.image);
     }
 
     @Override
